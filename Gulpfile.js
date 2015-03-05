@@ -67,8 +67,9 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('clean',function() {
-  gulp.src('_build/',{read:false})
-    .pipe(p.clean({ force : true })) // TODO: this needs some option to allow it to delete not empty folders
+  // we return it so it runs async
+  return gulp.src('_build/',{read:false})
+    .pipe(p.clean({ force : true }))
 });
 
 gulp.task('watch', ['browser-sync'] ,function() {
