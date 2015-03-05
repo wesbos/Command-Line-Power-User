@@ -1,0 +1,26 @@
+{
+  "name": "command-line-power-user",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.2.1",
+    "gulp": "^3.8.11",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.5.0",
+    "gulp-debug": "^2.0.1",
+    "gulp-imagemin": "^2.2.0",
+    "gulp-jade": "^1.0.0",
+    "gulp-load-plugins": "^0.8.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-stylus": "^2.0.1",
+    "gulp-uglify": "^1.1.0",
+    "imagemin-pngquant": "^4.0.0"
+  }
+}

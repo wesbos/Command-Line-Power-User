@@ -1,0 +1,8 @@
+h1
+  background blue
+  a
+    color white
+    text-decoration none
+    padding 10px
+.wrapper
+  background red
