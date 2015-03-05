@@ -54,7 +54,7 @@ gulp.task('images',function() {
           progressive: true,
           svgoPlugins: [{removeViewBox: false}]
       }))
-      .pipe(gulp.dest('_build/'))
+      .pipe(gulp.dest('_build/images'))
 });
 
 // Start the server
