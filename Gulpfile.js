@@ -79,4 +79,4 @@ gulp.task('watch', ['browser-sync'] ,function() {
 });
 
 // the default tasks runs when you simply type 'gulp'
-gulp.task('default',['clean','styles','scripts','templates','watch']);
+gulp.task('default',['clean','images','styles','scripts','templates','watch']);
