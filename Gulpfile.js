@@ -19,9 +19,9 @@ var p = require('gulp-load-plugins')();
 // if a change to the glob is needed, we simply edit it here rather than in 2 places
 var globs = {
   "scripts" : ['source/js/*.js'],
-  "styles"  : ['source/css/style.stylus'],
+  "styles"  : ['source/css/style.styl'],
   "templates"  : ['source/index.jade'],
-  "images"  : ['source/images/**/*.+(jpg|png)'],
+  "images"  : ['source/images/**/*'],
 }
 
 gulp.task('scripts',function() {
@@ -35,9 +35,15 @@ gulp.task('scripts',function() {
 
 gulp.task('styles',function() {
   gulp.src(globs.styles)
+    .pipe(p.plumber({errorHandler: p.notify.onError("Error: <%= error.message %>")}))
     .pipe(p.stylus())
     .pipe(gulp.dest('./_build/css/'))
     .pipe(reload({stream:true}))
+    .pipe(p.notify({
+      title : 'Styles Done!!',
+      sound : true,
+      message : 'ya man'
+    }))
 });
 
 gulp.task('templates',function() {

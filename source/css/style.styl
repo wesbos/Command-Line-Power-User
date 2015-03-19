@@ -1,0 +1,70 @@
+blue = #193549
+
+@import '_normalize'
+
+h1,h2,h3,h4,h5, h6
+  font-family oswald, sans-serif
+  font-weight normal
+  margin 0
+
+html
+  font-size 10px
+
+h1
+  font-size 5rem
+
+p
+  font-size 1.8rem
+
+img
+  max-width 100%
+h1
+  text-transform uppercase
+  letter-spacing 2px
+  a
+    color white
+    text-decoration none
+    padding 10px
+
+header.top
+  background blue
+  text-align center
+  color white
+  padding 5rem
+  margin-bottom 5rem
+
+
+ul.video-list
+  list-style none
+  padding 0
+  display flex
+  flex-direction row
+  flex-wrap wrap
+  max-width 120rem
+  margin 0 auto
+  counter-reset video
+  li
+    width 50%
+    margin-bottom 2rem
+    counter-increment video
+    position relative
+    &:before
+      content counter(video, decimal-leading-zero)
+      position absolute
+      color white
+      background black
+      padding 10px
+    img
+      float left
+      max-width 250px
+      margin-right 2rem
+
+
+.video-title
+  font-size 2rem
+  margin 0
+
+.video
+  p
+    margin-top 0
+    line-height 2

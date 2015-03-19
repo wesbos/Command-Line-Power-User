@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  header
+  header.top
     h1
       a(href="http://CommandLinePowerUser.com") Command Line Power User
     p.desc A <em>free</em> video series on improving your command line workflow with ZSH, Z and related tools.
@@ -9,49 +9,49 @@ block content
 
   section.videos
     ul.video-list
-      li
-        img(src="images/1.png" alt="Introduction to Command Line Power User" data-timecode="2:10")
+      li.video
+        img(src="images/1.png" alt="Introduction to Command Line Power User" data-timecode.video-title="2:10")
         h3 Introduction to Command Line Power User
         p.video-desc What are these videos all about?
-      li
+      li.video
         img(src="images/2.png" alt="Command Line Basics" data-timecode="2:10")
-        h3 Command Line Basics
+        h3.video-title Command Line Basics
         p.video-desc Never used the command line before? Here is a quick rundown of the basic commands.
-      li
+      li.video
         img(src="images/3.png" alt="Installing iTerm or Cygwin" data-timecode="2:10")
-        h3 Installing iTerm or Cygwin
+        h3.video-title Installing iTerm or Cygwin
         p.video-desc Why mac users should ditch terminal. What to use if you are on windows.
-      li
+      li.video
         img(src="images/4.png" alt="Installing ZSH &amp; Oh-My-ZSH" data-timecode="2:10")
-        h3 Installing ZSH &amp; Oh-My-ZSH
+        h3.video-title Installing ZSH &amp; Oh-My-ZSH
         p.video-desc What is ZSH? What about Oh-My-ZSH? Let's get them installed!
-      li
+      li.video
         img(src="images/5.png" alt="Custom Terminal Colours" data-timecode="2:10")
-        h3 Custom Terminal Colours
+        h3.video-title Custom Terminal Colours
         p.video-desc Customize your terminal with custom colours.
-      li
+      li.video
         img(src="images/6.png" alt="Custom ZSH Themes &amp; Prompts")
-        h3 Custom ZSH Themes &amp; Prompts
+        h3.video-title Custom ZSH Themes &amp; Prompts
         p.video-desc Pimp out your terminal with themes. Create a custom prompt that integrates with Git, Ruby and Node.
-      li
+      li.video
         img(src="images/7.png" alt="Discovering ZSH Features")
-        h3 Discovering ZSH Features
+        h3.video-title Discovering ZSH Features
         p.video-desc What makes ZSH so good anyways? What are the features you can best take advantage of?
-      li
+      li.video
         img(src="images/8.png" alt="Advanced History with ZSH")
-        h3 Advanced History with ZSH
+        h3.video-title Advanced History with ZSH
         p.video-desc Stop typing the same command over and over again!
-      li
+      li.video
         img(src="images/9.png" alt="Getting the most out of ZSH with Plugins")
-        h3 Getting the most out of ZSH with Plugins
+        h3.video-title Getting the most out of ZSH with Plugins
         p.video-desc Have a specific workflow need? Git commands, NPM methods, Cloudapp integration...
-      li
+      li.video
         img(src="images/10.png" alt="Using z to jump to \"frecent\" folders")
-        h3 Using z to jump to "frecent" folders
+        h3.video-title Using z to jump to "frecent" folders
         p.video-desc Are you using z? Greatly speed up your file system traversal and say goodbye to finder.
-      li
+      li.video
         img(src="images/11.png" alt="Deletion of files + folders with trash")
-        h3 Deletion of files + folders with <code>trash</code>
+        h3.video-title Deletion of files + folders with <code>trash</code>
         p.video-desc Still using <code>rm</code>? Stop! The <code>trash</code> command is the better and safer alternative.
 
   section.sample
