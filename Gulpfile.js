@@ -51,6 +51,7 @@ gulp.task('templates',function() {
     .pipe(p.jade())
     .pipe(p.debug())
     .pipe(gulp.dest('./_build/'))
+    .pipe(reload({stream:true}))
 });
 
 gulp.task('images',function() {
