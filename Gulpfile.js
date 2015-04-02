@@ -48,7 +48,7 @@ gulp.task('styles',function() {
 
 gulp.task('templates',function() {
   gulp.src(globs.templates)
-    .pipe(p.jade())
+    .pipe(p.jade({pretty: true}))
     .pipe(p.debug())
     .pipe(gulp.dest('./_build/'))
     .pipe(reload({stream:true}))
@@ -86,4 +86,4 @@ gulp.task('watch', ['browser-sync'] ,function() {
 });
 
 // the default tasks runs when you simply type 'gulp'
-gulp.task('default',['clean','images','styles','scripts','templates','watch']);
+gulp.task('default',['styles','scripts','templates','watch']);

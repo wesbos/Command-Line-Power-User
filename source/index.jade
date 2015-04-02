@@ -4,70 +4,95 @@ block content
   header.top
     h1
       a(href="http://CommandLinePowerUser.com") Command Line Power User
-    video.term(src="videos/command-line-video.mp4" loop autoplay mute)
+    video.term(src="images/command-line-video.mp4" loop autoplay mute poster="/images/poster.png")
 
   section.deets
-    p.desc A <em>free</em> video series to improve your command line workflow with ZSH, Z and related tools.
-    p 11 HD "I had no idea you could do that" videos
+    p.desc A video series for web developers on learning a modern command line workflow with ZSH, Z and related tools.
+
+    form.signup(action="post")
+      label(for="email")
+      input(type="email" name="email" placeholder="Email Address")
+      input(type="submit" value="Send me the videos!")
+
+    p.naw 100% Free — Receive all 11 Videos instantly — No Spam!
+
+  section.social
+    a(href="https://twitter.com/share" class="twitter-share-button" data-url="http://CommandLinePowerUser.com" data-text="Command Line Power User: A free command line workflow series by @wesbos → " data-related="wesbos") Tweet
+    a(href="https://twitter.com/wesbos" class="twitter-follow-button" data-show-count="true") Follow @wesbos
+    div(class="fb-like" data-href="http://CommandLinePowerUser.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false") Like
+    g:plusone()
 
   section.videos
+    .about
+      .half
+        h3 What is this?
+        p 11 <em>"I had no idea you could do that"</em> videos for web developers looking to improve their command line skills.
+        p They cover a workflow using some of the best modern tools that relate to using command line tools such as git, npm, gulp and so on.
+      .half
+        h3 Who made these?
+        img.handsome(src="https://pbs.twimg.com/profile_images/483631308589920256/01FPpVF0.jpeg")
+        p <a href="http://wesbos.com" target="_blank">Wes Bos</a> - a full stack developer and teacher passionate about workflow and tooling. Wes recently released <a href="https://SublimeTextBook.com">Sublime Text Power User</a> - a book and video series on mastering Sublime Text.
+
+    h3 The Videos
     ul.video-list
-      li.video
-        img(src="images/1.png" alt="Introduction to Command Line Power User" data-timecode.video-title="2:10")
+      li.video(data-timecode="1:00")
+        img(src="images/covers/1.jpg" alt="Introduction to Command Line Power User")
         h3.video-title Introduction to Command Line Power User
         p.video-desc What are these videos all about?
-      li.video
-        img(src="images/2.png" alt="Command Line Basics" data-timecode="2:10")
+      li.video(data-timecode="2:10")
+        img(src="images/covers/2.jpg" alt="Command Line Basics" data-timecode="7:10")
         h3.video-title Command Line Basics
         p.video-desc Never used the command line before? Here is a quick rundown of the basic commands.
-      li.video
-        img(src="images/3.png" alt="Installing iTerm or Cygwin" data-timecode="2:10")
+      li.video(data-timecode="2:10")
+        img(src="images/covers/3.jpg" alt="Installing iTerm or Cygwin" data-timecode="5:06")
         h3.video-title Installing iTerm or Cygwin
         p.video-desc Why mac users should ditch terminal. What to use if you are on windows.
-      li.video
-        img(src="images/4.png" alt="Installing ZSH &amp; Oh-My-ZSH" data-timecode="2:10")
+      li.video(data-timecode="4:38")
+        img(src="images/covers/4.jpg" alt="Installing ZSH &amp; Oh-My-ZSH")
         h3.video-title Installing ZSH &amp; Oh-My-ZSH
         p.video-desc What is ZSH? What about Oh-My-ZSH? Let's get them installed!
-      li.video
-        img(src="images/5.png" alt="Custom Terminal Colours" data-timecode="2:10")
+      li.video(data-timecode="7:24")
+        img(src="images/covers/5.jpg" alt="Custom Terminal Colours")
         h3.video-title Custom Terminal Colours
         p.video-desc Customize your terminal with custom colours.
-      li.video
-        img(src="images/6.png" alt="Custom ZSH Themes &amp; Prompts")
+      li.video(data-timecode="12:48")
+        img(src="images/covers/6.jpg" alt="Custom ZSH Themes &amp; Prompts")
         h3.video-title Custom ZSH Themes &amp; Prompts
-        p.video-desc Pimp out your terminal with themes. Create a custom prompt that integrates with Git, Ruby and Node.
-      li.video
-        img(src="images/7.png" alt="Discovering ZSH Features")
+        p.video-desc Pimp your terminal with themes. Create a custom prompt that integrates with Git, Ruby and Node.
+      li.video(data-timecode="8:15")
+        img(src="images/covers/7.jpg" alt="Discovering ZSH Features")
         h3.video-title Discovering ZSH Features
         p.video-desc What makes ZSH so good anyways? What are the features you can best take advantage of?
-      li.video
-        img(src="images/8.png" alt="Advanced History with ZSH")
+      li.video(data-timecode="2:30")
+        img(src="images/covers/8.jpg" alt="Advanced History with ZSH")
         h3.video-title Advanced History with ZSH
         p.video-desc Stop typing the same command over and over again!
-      li.video
-        img(src="images/9.png" alt="Getting the most out of ZSH with Plugins")
+      li.video(data-timecode="9:04")
+        img(src="images/covers/9.jpg" alt="Getting the most out of ZSH with Plugins")
         h3.video-title Getting the most out of ZSH with Plugins
         p.video-desc Have a specific workflow need? Git commands, NPM methods, Cloudapp integration...
-      li.video
-        img(src="images/10.png" alt="Using z to jump to \"frecent\" folders")
+      li.video(data-timecode="10:52")
+        img(src="images/covers/10.jpg" alt="Using z to jump to \"frecent\" folders")
         h3.video-title Using z to jump to "frecent" folders
         p.video-desc Are you using z? Greatly speed up your file system traversal and say goodbye to finder.
-      li.video
-        img(src="images/11.png" alt="Deletion of files + folders with trash")
+      li.video(data-timecode="5:03")
+        img(src="images/covers/11.jpg" alt="Deletion of files + folders with trash")
         h3.video-title Deletion of files + folders with <code>trash</code>
         p.video-desc Still using <code>rm</code>? Stop! The <code>trash</code> command is the better and safer alternative.
 
-  section.sample
+  section.deets.secondary
+    p.desc Ready to slam dunk the command line?
 
-  section.signup
-    h2 Ready to up your Command Line Workflow Game?
-
-    form(action="post")
+    form.signup(action="post")
       label(for="email")
-      input(type="email" name="email")
+      input(type="email" name="email" placeholder="Email Address")
       input(type="submit" value="Send me the videos!")
 
-  section.faq
-    h2 Brought to you by Wes Bos
-    p Bio goes here...
-    a.twitter @wesbos
+    p.naw 100% Free — Receive all 11 Videos instantly — No Spam!
+
+  section.social
+    a(href="https://twitter.com/share" class="twitter-share-button" data-url="http://CommandLinePowerUser.com" data-text="Command Line Power User: A free command line workflow series by @wesbos → " data-related="wesbos") Tweet
+    a(href="https://twitter.com/wesbos" class="twitter-follow-button" data-show-count="true") Follow @wesbos
+    div(class="fb-like" data-href="http://CommandLinePowerUser.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false") Like
+    g:plusone()
+
