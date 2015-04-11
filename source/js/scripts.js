@@ -8,13 +8,22 @@ $(function() {
       },
       dataType : 'jsonp',
       success : function(res){
+        // send the vids
         $.ajax('http://wesbos.com/mc/sendvids.php',{
           data :  {email : email},
           dataType : 'jsonp'
-        }); // send email
+        });
 
+        // side it up
         $('form.signup, p.naw').slideUp();
+
+        // tell the what is next
         $('p.desc').html('Thanks! The videos will be in your inbox in a few minutes! <br><strong>Mind showing some love?</strong> Share this page — this allows me to produce more great videos!').addClass('success');
+
+        // seeing if FB ads are worth anything (probably not!)
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', '6024371845617', {'value':'0.00','currency':'CAD'}]);
+
       }
     });
   });
@@ -38,5 +47,20 @@ $(function() {
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+// Google Analytics
 ga('create', 'UA-61412542-1', 'auto');
 ga('send', 'pageview');
+
+// Facebook Ads
+
+(function() {
+    var _fbq = window._fbq || (window._fbq = []);
+    if (!_fbq.loaded) {
+      var fbds = document.createElement('script');
+      fbds.async = true;
+      fbds.src = '//connect.facebook.net/en_US/fbds.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(fbds, s);
+      _fbq.loaded = true;
+    }
+  })();
