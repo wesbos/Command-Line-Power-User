@@ -2,30 +2,36 @@ $(function() {
   $('form.signup').on('submit',function(e){
     e.preventDefault();
     var email = $(this).find('input[name="email"]').val();
-    $.ajax('http://wesbos.com/mc',{
+
+    // list
+    $.ajax('http://bostype.com/sendy/subscribe', {
+      type : 'POST',
       data : {
-        email : email
+        email : email,
+        list : 'Ct7zsQu3UIBOKuXcvE583Q',
+        boolean : true
       },
-      dataType : 'jsonp',
-      success : function(res){
-        // send the vids
-        $.ajax('http://wesbos.com/mc/sendvids.php',{
-          data :  {email : email},
-          dataType : 'jsonp'
-        });
-
-        // side it up
-        $('form.signup, p.naw').slideUp();
-
-        // tell the what is next
-        $('p.desc').html('Thanks! The videos will be in your inbox in a few minutes! <br><strong>Mind showing some love?</strong> Share this page — this allows me to produce more great videos!').addClass('success');
-
-        // seeing if FB ads are worth anything (probably not!)
-        window._fbq = window._fbq || [];
-        window._fbq.push(['track', '6024371845617', {'value':'0.00','currency':'CAD'}]);
+      success : function(res) {
 
       }
     });
+
+    // send the vids
+    $.ajax('http://wesbos.com/mc/sendvids.php',{
+      data :  {email : email},
+      dataType : 'jsonp'
+    });
+
+    // side it up
+    $('form.signup, p.naw').slideUp();
+
+    // tell the what is next
+    $('p.desc').html('Thanks! The videos will be in your inbox in a few minutes! <br><strong>Mind showing some love?</strong> Share this page — this allows me to produce more great videos!').addClass('success');
+
+    // seeing if FB ads are worth anything (probably not!)
+    window._fbq = window._fbq || [];
+    window._fbq.push(['track', '6024371845617', {'value':'0.00','currency':'CAD'}]);
+
   });
 });
 
