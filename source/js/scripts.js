@@ -32,6 +32,12 @@ $(function() {
     window._fbq = window._fbq || [];
     window._fbq.push(['track', '6024371845617', {'value':'0.00','currency':'CAD'}]);
 
+    // Twitter
+    twttr.conversion.trackPid('l62u2', { tw_sale_amount: 0, tw_order_quantity: 0 });
+
+    // Google Analytics
+    ga('send', 'event', 'signup','clpu');
+
   });
 });
 
