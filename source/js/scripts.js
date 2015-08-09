@@ -9,10 +9,10 @@ $(function() {
       data : {
         email : email,
         list : 'Ct7zsQu3UIBOKuXcvE583Q',
-        boolean : true
+        boolean : true,
+        commandline : 'true'
       },
       success : function(res) {
-
       }
     });
 
