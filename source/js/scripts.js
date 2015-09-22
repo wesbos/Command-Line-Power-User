@@ -31,6 +31,7 @@ $(function() {
     // seeing if FB ads are worth anything (probably not!)
     window._fbq = window._fbq || [];
     window._fbq.push(['track', '6024371845617', {'value':'0.00','currency':'CAD'}]);
+    window._fbq.push(['track', 'Signup', {}]);
 
     // Twitter
     twttr.conversion.trackPid('l62u2', { tw_sale_amount: 0, tw_order_quantity: 0 });
@@ -75,4 +76,7 @@ ga('send', 'pageview');
       s.parentNode.insertBefore(fbds, s);
       _fbq.loaded = true;
     }
+    _fbq.push(['addPixelId', '1038184196213607']);
+    window._fbq.push(['track', 'PixelInitialized', {}]);
+    window._fbq.push(['track', 'View', {}]);
   })();
