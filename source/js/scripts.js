@@ -17,9 +17,8 @@ $(function() {
     });
 
     // send the vids
-    $.ajax('http://wesbos.com/mc/sendvids.php',{
-      data :  {email : email},
-      dataType : 'jsonp'
+    $.getJSON('https://reactforbeginners.com/api/course/'+encodeURIComponent(email)+'/CLPU', function(res) {
+      console.logr(res);
     });
 
     // side it up

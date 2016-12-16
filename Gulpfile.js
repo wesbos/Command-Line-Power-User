@@ -87,13 +87,14 @@ gulp.task('watch', ['browser-sync'] ,function() {
 
 
 gulp.task('deploy', function() {
-  gulp.src('_build/**')
+  gulp.src('_build/**/*', { base : '_build/' })
     .pipe(p.sftp({
-        host: 'bostype.com',
+        host: 'ftp.bostype.com',
         user : 'bostypec',
         remotePath : '/home3/bostypec/www/commandlinepoweruser'
     }));
 });
+
 
 // the default tasks runs when you simply type 'gulp'
 gulp.task('default',['styles','scripts','templates','watch']);
